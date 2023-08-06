@@ -1,5 +1,5 @@
 # utenor.github.io
-Utenor.com
+https://utenor.com
 
 First Draft for Utenor.com
 
