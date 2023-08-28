@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>utenor | home</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-	<link rel="manifest" href="/site.webmanifest">
+  <title>Utenor</title>
+  <meta name="description" content="Welcome to utenor.com - utenor's digital portfolio. Immerse yourself in a unique blend of web development, graphic design, and cars. Discover inspiring DevBlog posts, showcase-worthy projects, and a diverse skillset that encompasses web technologies, programming and more. Connect with utenor on social media to stay updated on the latest endeavors and be part of an exciting journey of constant growth.">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       margin: 0;
@@ -14,94 +16,144 @@
       background-color: #000;
       position: relative;
       display: flex;
-      height: 100vh;
+      min-height: 100vh;
+	  flex-direction: row;
+	  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8); /* Adjust the values as needed */
     }
-
-    .left-container {
-      flex: 1;
+	.logo img {
+	  width: 500px; 
+	  height: auto;
+	}
+	p {
+	  color: #CCCCCC;
+	}
+    .top-container {
+	  flex: 0 0 auto;
       display: flex;
-	  flex-direction: column;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       color: #fff;
       font-size: 48px;
+	  height: 100vh;
 	  background-color: rgba(0, 0, 0, 0.8);
     }
-    .motto {
-      font-size: 24px;
-      margin-top: 10px;
-    }
-
-    .right-container {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .bottom-container {
       overflow-y: auto;
-	  background-color: rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      color: white;
+      font-size: 1rem;
+      line-height: 1.6; /* Increase line spacing here */
+	  background-color: black;
     }
-
     /* Style the navbar links */
-    .navbar {
+    .projects {
       list-style: none;
       padding: 0;
+      display: flex; /* Use flexbox to arrange the list items horizontally */
       margin: 0;
+      justify-content: center; /* Center the list items horizontally */
+      flex-wrap: wrap; /* Enable wrapping of list items to multiple lines */
     }
-
-    .navbar li {
-      padding: 10px;
-      text-align: center;
+    .projects li {
+      padding: 25px;
+      margin-right: 40px;
+      margin-left: 40px;
     }
-
-    .navbar li a {
-      text-decoration: none;
-      color: #fff;
-      font-weight: bold;
-      font-size: 20px;
-      font-family: monospace;
-      display: block;
-	  color: #7FF000
-    }
-
-    /* Apply the animated background effect */
-    body::before {
-      content: "";
-      position: fixed;
+    .background-video {
+      position: absolute;
       top: 0;
       left: 0;
       width: 100%;
-      height: 100%;
+      height: 118vh;
       z-index: -1;
-      background-image: url("background.png"); /* Replace with the path to your background image */
-      animation: sway 5s ease infinite; /* Adjust animation duration and timing function as desired */
+      object-fit: cover; /* Make the video cover the entire container */	
     }
-
-    @keyframes sway {
-      0%   { transform: translateX(-5px); }
-      50%  { transform: translateX(5px); }
-      100% { transform: translateX(-5px); }
+    .projects li a {
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      font-family: monospace;
+      display: block;
+      color: #CCCCCC;
     }
-
     ::selection {
       background-color: white;
       color: black;
-    }	
-}
-  </style>
+    }
+	.scroll-down-btn {
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      font-size: 24px;
+    }
+	@media (max-width: 768px) {
+	.background-video {
+      object-fit: cover; /* Change the object-fit property to "contain" for mobile */
+	  height: 100vh;
+    }
+    .projects li {
+      padding: 25px;
+      margin-right: 0px;
+      margin-left: 0px;
+    }
+	.logo img {
+      width: 300px;
+	  height: auto;
+    }
+	}
+	</style>
 </head>
 <body>
-  <div class="left-container">
-    <div class="logo">utenor</div>
-	<div class="motto"> 'ai is the electricity of the 21st century' </div>
+<video autoplay loop muted playsinline class="background-video" id="background-video">
+  <source src="background.mp4" type="video/mp4">
+  <source src="background.webm" type="video/webm">
+  <source src="background.ogv" type="video/ogg">
+</video>
+  <div class="container">
+  <div class="top-container" id="top-container">
+    <div class="logo"><img src="media/utenor.svg" alt="utenor logo"></div>
+	<div class="scroll-down-btn" id="scroll-down-btn">
+      <i class="arrow-icon">▼</i>
+    </div>
   </div>
+<div class="bottom-container" id="bottom-container">
+	<h2>intro</h2>
+  <p>Hello, I am "utenor", I have created this website for many reasons. <br> I used to get bored at home a lot, so I decided to take up learning Web Development. That was around 2021-22. <br> I launched my first accessible website, huracan.dev. <br> However, I gave up after a while since I never could quite get my website to work how I wanted it to. <br> It was a great learning experience though and now I have created "utenor.com". <br> I am usually not interested in programming and all that jazz but web development is more creative, much easier as well since its "coding" and not "programming". <br> I decided to come back to web development as I'm now bored again with nothing to do at home. <br> Hopefully, this time I'll learn even more and create some fun projects and maybe even create services for people like you reading this.</p>
+	<h2>projects</h2>
+  <ul class="projects">
+    <li><a href="terminal.html">web-terminal</a></li>
+    <li><a href="project2.html">utenorcrafts.co.uk</a></li>
+    <li><a href="project3.html">utenorMC</a></li>
+  </ul>
+	<h2>services</h2>
+  <p>Fusce pharetra, justo quis laoreet tincidunt, neque ligula hendrerit ipsum, eget consectetur lacus velit sit amet nulla. Nam blandit mi eu mi commodo, eget tincidunt est fermentum. Nam feugiat arcu eu velit efficitur, eu scelerisque orci tincidunt. Vivamus venenatis sapien sit amet justo ultricies, eu consequat magna euismod. Sed consequat libero nisl, vitae posuere enim tempor id. Vivamus nec arcu sit amet ipsum dapibus maximus. Sed ac justo eget nunc malesuada rhoncus. Nullam et dui nisl. Fusce nec felis quam. Suspendisse non elit vel nulla cursus finibus vel et ipsum. Cras finibus laoreet lectus, vel varius justo. Donec tincidunt, sapien nec facilisis varius, justo purus vehicula ex, eget vestibulum nisl eros nec nunc. Vestibulum at iaculis orci. Proin venenatis, ex eu fermentum euismod, felis metus vehicula tellus, vitae eleifend massa magna vel lectus.</p>
+	<h2>outro</h2>
+  <p>In eget magna sit amet turpis pharetra tempus. Nam nec pharetra orci. Curabitur at lorem bibendum, elementum turpis id, fringilla ex. In mollis urna ut turpis posuere, quis venenatis metus elementum. Cras bibendum massa et ligula dictum, sit amet egestas ex convallis. Integer a venenatis mauris. Vivamus rhoncus id turpis non venenatis. Suspendisse potenti. Donec vulputate risus odio, ac mattis libero vulputate a. Nullam bibendum tincidunt odio, eget dapibus purus. Vivamus laoreet est eu lorem eleifend, nec aliquet nulla ultrices.</p>
+  <p>Etiam dignissim purus id lacus vehicula, eget malesuada nisi tincidunt. Maecenas at ullamcorper est. In volutpat velit sed sem suscipit bibendum. Sed eget tincidunt mauris, at mattis metus. Etiam quis nisi vitae arcu vestibulum malesuada at vitae neque. Fusce quis rhoncus nisi. Etiam sit amet consectetur nisi. Ut vel interdum metus. Aliquam egestas non felis id maximus.</p>
+  <p>Proin gravida ex et justo dictum, eu porttitor purus vestibulum. Nulla facilisi. Duis blandit elit vitae leo vehicula fermentum. Donec nec luctus metus. Maecenas sit amet scelerisque est. Aenean consectetur quam a euismod fringilla. Pellentesque consectetur rhoncus tellus a consectetur. Suspendisse dignissim leo dui, nec vulputate libero posuere non. Sed nec dictum nisl, eu aliquam libero. Donec non fermentum est, in tincidunt lorem. Nulla facilisi. Nunc semper ultrices ante sit amet eleifend. Maecenas accumsan lectus in lorem interdum hendrerit.</p>
+  <p>... More content goes here ...</p>
+</div>
+</div>
+  <script>
+    // Get reference to the bottom container element
+    const bottomContainer = document.getElementById('bottom-container');
 
-  <div class="right-container">
-    <ul class="navbar">
-      <li><a href="terminal">/ terminal</a></li>
-      <li><a href="projects">/ projects</a></li>
-      <li><a href="about">/ about</a></li>
-      <!-- Add more navbar links as needed -->
-    </ul>
-  </div>
+    // Function to scroll to the bottom container smoothly
+    function scrollToBottomContainer() {
+      bottomContainer.scrollIntoView({ behavior: 'smooth' });
+    }
+	
+	const backgroundVideo = document.getElementById('background-video');
+    backgroundVideo.playbackRate = 1.1; // Change this value to adjust the playback speed
+	
+    // Listen for click events on the scroll down button
+    const scrollDownBtn = document.getElementById('scroll-down-btn');
+    scrollDownBtn.addEventListener('click', () => {
+      scrollToBottomContainer();
+    });
+  </script>
 </body>
 </html>
