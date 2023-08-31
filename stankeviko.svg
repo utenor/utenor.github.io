@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="179.991mm"
+   height="29.486246mm"
+   viewBox="0 0 179.991 29.486246"
+   version="1.1"
+   id="svg7868"
+   sodipodi:docname="stankeviko.svg"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview12"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.7786769"
+     inkscape:cx="273.79902"
+     inkscape:cy="55.659349"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs7865">
+    <linearGradient
+       xlink:href="#linearGradient19967"
+       id="linearGradient19969"
+       x1="95.700157"
+       y1="114.29076"
+       x2="124.57361"
+       y2="114.29076"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(7.5627033,0,0,7.5627033,-698.91524,-761.08794)" />
+    <linearGradient
+       id="linearGradient19967">
+      <stop
+         style="stop-color:#9a9a9a;stop-opacity:1;"
+         offset="0"
+         id="stop19963" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="1"
+         id="stop19965" />
+    </linearGradient>
+  </defs>
+  <g
+     id="layer1"
+     transform="translate(-16.384596,-118.5307)">
+    <text
+       xml:space="preserve"
+       style="font-size:24.0116px;font-family:'Planet Kosmos';-inkscape-font-specification:'Planet Kosmos';word-spacing:0px;fill:#f8f8f8;fill-opacity:1;stroke:none;stroke-width:2.00097"
+       x="103.75083"
+       y="109.59838"
+       id="text18872"><tspan
+         id="tspan18870"
+         style="text-align:center;text-anchor:middle;fill:#f8f8f8;fill-opacity:1;stroke:none;stroke-width:2.00097"
+         x="103.75083"
+         y="109.59838" /><tspan
+         style="text-align:center;text-anchor:middle;fill:#f8f8f8;fill-opacity:1;stroke:none;stroke-width:2.00097"
+         x="103.75083"
+         y="139.61288"
+         id="tspan19971">Stankeviko</tspan></text>
+  </g>
+</svg>
