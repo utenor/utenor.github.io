@@ -1,150 +1,196 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Stankeviko</title>
-  <script src="https://kit.fontawesome.com/91adf75e7e.js" crossorigin="anonymous"></script>
-  <meta name="description" content="">
-  <link rel="icon" type="image/x-icon" href="media/favicon.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: monospace, Arial, sans-serif;
-      background-color: #000;
-      position: relative;
-      min-height: 100vh;
-	  max-height: 100vh;
-	  flex-direction: row;
-	  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8); /* Adjust the values as needed */
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://kit.fontawesome.com/91adf75e7e.js" crossorigin="anonymous"></script>
+	<link rel="icon" type="image/x-icon" href="media/favicon.png">
+    	<link rel="manifest" href="/site.webmanifest">
+    	<title>Stankeviko</title>
+    <style>
+        /* Reset some default styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: monospace, Arial, sans-serif;
+			color: white;
+			background-image: url(StankevikoBG.png);
+			background-size: cover; /* Cover the entire element */
+			background-repeat: no-repeat; /* Do not repeat the image */
+			background-attachment: fixed;
+        }
+        /* Style for the landing section */
+        .landing {
+            background-size: cover;
+            background-position: center;
+            height: 95vh;
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+			background-color: rgba(0, 0, 0, 0.7);
+        }	
+		.landing p {
+			font-size: 40px;
+		}
+        /* Style for the banner */
+        .banner {
+            background-color: black;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        /* Style for the section underneath */
+        .video {
+            padding-top: 4vw;
+			padding-bottom: 4vw;
+            text-align: center;
+			font-size: 60px;
+			background-color: black;
+        }
+		.scroll-down {
+			color: white;
+		}
+		.logo img {
+	        width: 500px; 
+	        height: auto;
+	    }
+/* Style for Portfolio Video Container */
+.latest-video {
+    position: relative;
+    overflow: hidden;
+    text-align: center; /* Center the iframe horizontally */
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    margin: 0 auto; /* Center the video item horizontally on the page */
+	width: 800px;
+    height: 400px;
+}
+
+.latest-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 800px;
+    height: 400px;
+}
+.archive {
+    padding: 40px;
+    text-align: center;
+	background-color: black;
+}
+
+/* Style for the Archive Grid */
+.archive-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Style for Archive Items (YouTube Embeds) */
+.archive-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.archive-item iframe {
+    width: 100%;
+    height: 100%;
+    max-height: 315px; /* Adjust the maximum height as needed */
+}
+.socials {
+    text-align: center;
+	background-color: black;
+	padding-bottom: 5px;
+	padding-top: 15px;
+}
+/* Style for the Social Media Icons (Font Awesome) */
+.social-icons a {
+    color: white; /* Set the color to white */
+    text-decoration: none;
+    margin: 0 10px; /* Adjust margin as needed to space the icons */
+    font-size: 30px; /* Adjust the font size as needed */
+}
+/* Hover effect (optional): Change color on hover */
+.social-icons a:hover {
+    color: #007bff; /* Change to the desired hover color */
+}
+@media (max-width: 768px) {
+    /* Reset the grid layout and stacking items vertically */
+    .video-grid {
+        display: block;
     }
-	.icon-container {
-      display: flex;
-      align-items: center;
-      justify-content: center; /* Center icons horizontally */
+     /* Adjust spacing for each video item */
+    .video-item {
+        margin-bottom: 20px;
     }
-	.icon-container a {
-      padding: 0 10px; /* Add padding to create space between icons */
-	  font-size: 3rem;
+	    /* Limit the image width to the screen width minus some padding */
+    .video-item img {
+        max-width: calc(100% - 20px); /* Adjust the padding as needed */
+        height: auto;
     }
-	.icon-container a:not(:first-child) {
-      margin-left: 10px; /* Add margin only between icons */
-    }
+	.landing h1 {
+		font-size: 60px;
+	}	
 	.banner {
-      background-color: #000;
-      color: white;
-	  align-items: center;
-      justify-content: center;
-	  text-align: center;
-      padding: 10px;
-	  max-width: 100%; /* Make the banner span the entire width */
-	  top: 0;
-      left: 0;
-	  font-size: 1rem;
-    }
+		font-size: 15px;
+	}
 	.logo img {
-	  width: 500px; 
-	  height: auto;
+        width: 300px;
+	    height: auto;
+    }
+	.latest-video {
+		width: 300px;
+		height: 200px;
 	}
-    .top-container {
-	  flex: 0 0 auto;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      font-size: 48px;
-	  height: 92vh;
-	  background-color: rgba(0, 0, 0, 0.8);
-    }
-    /* Style the navbar links */
-    .projects {
-      list-style: none;
-      padding: 0;
-      display: flex; /* Use flexbox to arrange the list items horizontally */
-      margin: 0;
-      justify-content: center; /* Center the list items horizontally */
-      flex-wrap: wrap; /* Enable wrapping of list items to multiple lines */
-    }
-    .projects li {
-      padding: 25px;
-      margin-right: 40px;
-      margin-left: 40px;
-    }
-    .background-video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      object-fit: cover; /* Make the video cover the entire container */	
-    }
-    .projects li a {
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.1rem;
-      font-family: monospace;
-      display: block;
-      color: #CCCCCC;
-    }
-    ::selection {
-      background-color: white;
-      color: black;
-    }
-	.scroll-down-btn {
-      cursor: pointer;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #fff;
-      font-size: 24px;
-    }
-	@media (max-width: 768px) {
-	.background-video {
-      object-fit: cover; /* Change the object-fit property to "contain" for mobile */
-	  height: 100vh;
-	  width: 100%;
-    }
-    .projects li {
-      padding: 25px;
-      margin-right: 0px;
-      margin-left: 0px;
-    }
-	.logo img {
-      width: 300px;
-	  height: auto;
-    }
-	.icon-container a{
-	  font-size: 2rem;
+	.latest-video iframe {
+		width: 300px;
+		height: 200px;
 	}
-	}
-	</style>
+	.video {
+        padding-top: 47vw;
+		padding-bottom: 60vw;
+        text-align: center;
+		font-size: 30px;
+    }
+    </style>
 </head>
-<body>
-<div class="banner">
-        <p><b>🚧 stankeviko.com is under construction. 🚧</b></p>
-</div>
-<video autoplay loop muted playsinline class="background-video" id="background-video">
-  <source src="background.mp4" type="video/mp4">
-  <source src="background.webm" type="video/webm">
-  <source src="background.ogv" type="video/ogg">
-</video>
-  <div class="container">
-  <div class="top-container" id="top-container">
-    <div class="logo"><img src="stankeviko.svg" alt="utenor logo"></div>
-	<div class="icon-container">
-	<a href="https://fiverr.com/aroldas">
-    <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
-	</a>
-	<a href="https://instagram.com/stankeviko">
-    <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
-	</a>
-	<a href="https://youtube.com/@stankeviko">
-    <i class="fa-brands fa-youtube" style="color: #ffffff;"></i>
-	</a>
-	</div>
-  </div>
+<body>  
+    <div class="banner">
+        <p><b>🚧 STANKEVIKO WILL BE READY IN 2024 🚧</b></p>
+    </div>
+    <section class="landing">
+        <div class="logo"><img src="media/stankeviko.svg" alt="utenor logo"></div>
+        <a href="#video" class="scroll-down"><i class="fas fa-chevron-down"></i></a>
+    </section>
+	<section id="video" class="video">
+		<h2>LATEST VIDEO</h2>
+		<div class="video-item">
+			<div class="latest-video">
+				<iframe width="560" height="100" src="https://www.youtube.com/embed/K4TOrB7at0Y" frameborder="0" allowfullscreen></iframe>
+			</div>
+		</div>
+	</section>
+	<section class="socials">
+		<div class="social-icons">
+			<a href="https://youtube.com/@stankeviko" target="_blank"><i class="fab fa-youtube"></i></a>
+			<a href="#" target="_blank"><i class="fab fa-x-twitter"></i></a>
+			<a href="https://instagram.com/stankeviko" target="_blank"><i class="fab fa-instagram"></i></a>
+			<a href="#" target="_blank"><i class="fab fa-discord"></i></a>
+			<a href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
+		</div>
+			<p class="made-by">Made by @Stankeviko</p> <!-- Add your name or attribution here -->
+	</section>
+<script> 
+// Toggle the hamburger menu
+document.getElementById('menu-icon').addEventListener('click', function () {
+    var menu = document.getElementById('menu');
+    menu.classList.toggle('active');
+});
+
+</script>
 </body>
 </html>
