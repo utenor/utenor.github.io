@@ -30,7 +30,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-			background-color: rgba(0, 0, 0, 0.7);
+			background-color: rgba(0, 0, 0, 1);
         }	
 		.landing p {
 			font-size: 40px;
@@ -156,32 +156,12 @@
         text-align: center;
 		font-size: 30px;
 	}
-	@media (max-width: 768px) {
-	.background-video {
-          object-fit: cover; /* Change the object-fit property to "contain" for mobile */
-	  height: 100vh;
-	  width: 100%;
-	}
-	.background-video {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          z-index: -1;
-          object-fit: cover; /* Make the video cover the entire container */	
-    }
     </style>
 </head>
 <body>  
     <div class="banner">
         <p><b>🚧 UTENOR WILL BE READY IN 2025 🚧</b></p>
     </div>
-<video autoplay loop muted playsinline class="background-video" id="background-video">
-    <source src="background.mp4" type="video/mp4">
-    <source src="background.webm" type="video/webm">
-    <source src="background.ogv" type="video/ogg">
-</video>
     <section class="landing">
         <div class="logo"><img src="utenor.svg" alt="utenor logo"></div>
         <a href="#video" class="scroll-down"><i class="fas fa-chevron-down"></i></a>
